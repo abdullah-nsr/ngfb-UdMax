@@ -1,19 +1,63 @@
-<section>
-    <form>
+<section class="signup-form">
+    <!-- <form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="formSubmit(f)"> -->
+    <form fxLayout="column" fxLayoutAlign="center center">
+  
         <mat-form-field>
-            <input type="email" matInput placeholder="your email" >
+            <mat-label>Your Email</mat-label>
+            <input
+                type="email"
+                placeholder="your email"
+                matInput
+                ngModel
+                name="email"
+                required
+                #emailError="ngModel">
+            <mat-error *ngIf="emailError.hasError('required')">Field must not be Empty.</mat-error>
+            <mat-error *ngIf="!emailError.hasError('required')">E-mail is invalid.</mat-error>
+        </mat-form-field>
+        <mat-form-field hintLabel="min 8 character length.">
+            <mat-label>Your Password</mat-label>
+            <input
+                type="password"
+                placeholder="your password"
+                matInput
+                ngModel
+                name="password"
+                required
+                minlength="8"
+                #pwInput="ngModel"
+                >
+             <mat-hint  >{{ pwInput.value?.length }} / 8 </mat-hint>
+             <mat-error *ngIf="pwInput.hasError('required')">password must not be empty.</mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input type="password" matInput placeholder="your password" >
+            <mat-label>Choose a date</mat-label>
+            <input 
+                [matDatepicker]="picker"
+                matInput
+                placeholder="your birthday"
+                [max] = "maxDate"
+                [min] = "minDate"
+              >
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
+          
+        <!-- <mat-form-field>
+            <input type="text" placeholder="your birthday">
+            <mat-label>Chose a date</mat-label>
+            <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> -->
+        <button type="submit" mat-raised-button color="primary"> Submit </button>
     </form>
 </section>
-
-<div id="container">
+<!-- to controls form there are two way reactive aprotsh and templet driven approach -->
+<!-- <div id="container">
     <div id="child1" class="child"></div>
     <div id="child2" class="child"></div>
     <div id="child3" class="child"></div>
     <div id="child11" class="child-1"></div>
     <div id="child12" class="child-1"></div>
     <div id="child13" class="child-1"></div>
-</div>
+</div> -->
