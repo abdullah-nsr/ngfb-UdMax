@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'ngfb';
+  // one way to access local templeat refrence using @ViewChild('localrefrenc'); 
+  @ViewChild('sidenavv') sidenavv;
+  toggleNavFun(sidenavv) {
+    sidenavv.toggle()
+    console.log(sidenavv)
+  }
 }

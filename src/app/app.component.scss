@@ -1,0 +1,23 @@
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(0, 0, 0);
+  }
+
+  a {
+      text-decoration: none;
+      color: #fff;
+  }
+  a:hover,
+  a:active {
+      color: lightgray;
+  }
+  .toolbar-nav {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }

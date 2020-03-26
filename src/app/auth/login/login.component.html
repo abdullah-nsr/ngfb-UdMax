@@ -1,1 +1,39 @@
-<p>login works!</p>
+<section class="login-form">
+    <!-- <form 
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        (ngSubmit)="loginFormSubmit(loginForm)"
+        #loginForm="ngForm"
+        fxLayoutGap="10px"> -->
+    <form 
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        (ngSubmit)="onSubmit()"
+        [formGroup]="loginForm"
+        fxLayoutGap="10px">
+        <mat-form-field>
+            <mat-label >your Email</mat-label>
+            <input 
+                matInput
+                type="email"
+                placeholder="email"
+                formControlName="email">
+            <!-- <mat-error *ngIf="emailError" (click)="testEmailError('emailError')"></mat-error> -->
+            <mat-hint>inter your email </mat-hint>
+            <mat-error>invalid email</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>your password</mat-label>
+            <input 
+                matInput
+                type="text"
+                placeholder="password"
+                formControlName="password">
+            <mat-hint>inter your email </mat-hint>
+            <mat-error>invalid email</mat-error>
+        </mat-form-field>
+        <!-- <mat-checkbox ngModel name="remember" required color="primary" > remember me.</mat-checkbox> -->
+        <mat-checkbox formControlName="remember"  color="primary" > remember me.</mat-checkbox>
+        <button type="submit" mat-raised-button color="primary"  [disabled]="loginForm.invalid">Log-in</button>
+    </form>
+</section>

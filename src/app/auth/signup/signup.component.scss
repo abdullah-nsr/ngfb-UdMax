@@ -1,14 +1,22 @@
+
+* {
+    color: #fff;
+}
 section {
-    background-color: #fff;
-    height: 70%;
-    padding: 5%;
-    width: 100%;
-    box-sizing: border-box;
-    color: #000;;
+    color: #fff!important;
+    background-color: rgba(255, 255, 255, 0.157);
 }
-.signup-form{
-    width: 100%;
-}
+// section {
+//     background-color: #fff;
+//     height: 70%;
+//     padding: 5%;
+//     width: 100%;
+//     box-sizing: border-box;
+//     color: #000;;
+// }
+// .signup-form{
+//     width: 400px;
+// }
 // #container {
 //     display: flex;
 //     width: 100%;
