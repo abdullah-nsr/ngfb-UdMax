@@ -1,1 +1,18 @@
-<p>new-training works!</p>
+<section class="newTrraining" fxLayout fxLayoutAlign="center">
+    <mat-card fxFlex="400px" fxFlex.xs="100%">
+        <mat-card-title fxLayoutAlign="center">start new trraing</mat-card-title>
+        <mat-card-content fxLayoutAlign="center"> 
+            <mat-form-field>
+                <mat-label>bick new trraing!</mat-label>
+                <mat-select >
+                  <mat-option *ngFor="let trraing of trraings" [value]="trraing.name">
+                    {{trraing.name}}
+                  </mat-option>
+                </mat-select>   
+              </mat-form-field>
+        </mat-card-content>
+        <mat-card-action fxLayoutAlign="center">
+            <button mat-button (click)="onStartTraining()">Start</button>
+        </mat-card-action>
+    </mat-card>
+</section>

@@ -1,1 +1,8 @@
-<p>current-traing works!</p>
+<section class="current-traing" fxLayout="column" fxLayoutAlign="canter center">
+    <!-- <mat-progress-bar mode="determinate" value="20"></mat-progress-bar> -->
+    <mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
+    <h1>Progress {{ progress }} %</h1>
+    <p>ceep on going, you can do it! </p>
+    <button mat-raiesd-button color="accent" (click)="onStop()"> Stop </button>
+    <!-- <Mat-spinner mode="determinate" value="20"> </Mat-spinner> -->
+</section>
