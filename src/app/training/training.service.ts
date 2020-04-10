@@ -1,6 +1,8 @@
 import { Exercise } from './exercise.model';
+import { Subject } from 'rxjs/Subject'
 
 export class TrainingService {
+    changeExercise = new Subject<Exercise>();
     private availableExercise: Exercise[] = [
         { id: 'crunches', name: 'Crunches', duration: 30, calories: 8 },
         { id: 'touch-toes', name: 'Touch Toes', duration: 180, calories: 15 },
@@ -14,5 +16,10 @@ export class TrainingService {
 
     startExercise(selectedId) {
         this.runningExercise = this.availableExercise.find(ex => ex.id == selectedId) 
+        this.changeExercise.next({...this.runningExercise})
+    }
+
+    getCurrentExercise() {
+        return {...this.runningExercise};
     }
 }

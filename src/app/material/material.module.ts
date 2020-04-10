@@ -16,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialogModule } from '@angular/material/dialog';
+// import { MatDialogActions } from '@angular/material/dialog'
  
 const Material = [
   MatButtonModule,
@@ -33,7 +34,8 @@ const Material = [
   MatCardModule,
   MatSelectModule,
   MatProgressBarModule,
-  MatDialogModule
+  MatDialogModule,
+  // MatDialogActions
 ]
 
 @NgModule({

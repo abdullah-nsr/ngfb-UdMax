@@ -7,10 +7,10 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog'
         <h1 mat-dialog-title>Are you sure!</h1>
         <h2>You have got {{ passedData.progress }}%</h2>
     </mat-dialog-content> 
-    <mat-dialog-action>
+    <mat-dialog-actions>
         <button mat-button [mat-dialog-close]="true">Yes </button>
         <button mat-button [mat-dialog-close]="false">No </button>
-    </mat-dialog-action>` 
+    </mat-dialog-actions>` 
 })
 export class StopTrainingComponent {
     constructor(@Inject(MAT_DIALOG_DATA) public passedData: any ){ }
