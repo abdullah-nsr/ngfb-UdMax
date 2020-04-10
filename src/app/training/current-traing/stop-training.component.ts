@@ -1,0 +1,17 @@
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog'
+@Component({
+    selector: 'app-stop-training',
+    template: `
+    <mat-dialog-content>
+        <h1 mat-dialog-title>Are you sure!</h1>
+        <h2>You have got {{ passedData.progress }}%</h2>
+    </mat-dialog-content> 
+    <mat-dialog-action>
+        <button mat-button [mat-dialog-close]="true">Yes </button>
+        <button mat-button [mat-dialog-close]="false">No </button>
+    </mat-dialog-action>` 
+})
+export class StopTrainingComponent {
+    constructor(@Inject(MAT_DIALOG_DATA) public passedData: any ){ }
+}

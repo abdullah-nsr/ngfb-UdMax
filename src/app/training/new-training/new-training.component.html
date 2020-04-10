@@ -5,8 +5,8 @@
             <mat-form-field>
                 <mat-label>bick new trraing!</mat-label>
                 <mat-select >
-                  <mat-option *ngFor="let trraing of trraings" [value]="trraing.name">
-                    {{trraing.name}}
+                  <mat-option *ngFor="let exercise of exercises" [value]="exercise.id">
+                    {{exercise.name}}
                   </mat-option>
                 </mat-select>   
               </mat-form-field>
