@@ -16,7 +16,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialogModule } from '@angular/material/dialog';
-// import { MatDialogActions } from '@angular/material/dialog'
+// import { MatDialogActions } from '@angular/material/dialog';
+import  { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator'
  
 const Material = [
   MatButtonModule,
@@ -36,6 +39,9 @@ const Material = [
   MatProgressBarModule,
   MatDialogModule,
   // MatDialogActions
+  MatTableModule,
+  MatSortModule,
+  MatPaginatorModule
 ]
 
 @NgModule({
