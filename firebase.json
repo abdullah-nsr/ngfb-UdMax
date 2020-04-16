@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "ngfb",
+      "public": "dist/ngfb",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

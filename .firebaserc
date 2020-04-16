@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ngfb-udmax-p": {
+      "hosting": {
+        "ngfb": [
+          "ngfb-udmax-p"
+        ]
+      }
+    }
+  }
+}
