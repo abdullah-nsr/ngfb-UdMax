@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth'
 
 import { MaterialModule } from './material/material.module';
 import { SignupComponent } from './auth/signup/signup.component';
@@ -50,7 +51,7 @@ import { environment } from '../environments/environment'
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-
+    AngularFireAuthModule
   ],
   providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],

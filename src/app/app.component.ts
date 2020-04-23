@@ -1,11 +1,17 @@
-import { Component, ViewChild } from '@angular/core';
-
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { TrainingService } from '../app/training/training.service';
+import { AuthService } from '../app/auth/auth-service'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(
+    private trainingService: TrainingService,
+    private authService: AuthService 
+  ) {}
 
   title = 'ngfb';
   // one way to access local templeat refrence using @ViewChild('localrefrenc'); 
@@ -14,4 +20,8 @@ export class AppComponent {
     sidenavv.toggle()
     console.log(sidenavv)
   }
+  ngOnInit() {
+    this.authService.initAuthListener();
+  }
+
 }
