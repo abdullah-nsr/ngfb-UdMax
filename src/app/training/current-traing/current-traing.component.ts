@@ -12,7 +12,7 @@ import { Exercise } from '../exercise.model';
 })
 export class CurrentTraingComponent implements OnInit {
   progress = 0;
-  timer: number;
+  timer:any;
 
   constructor(private dialog: MatDialog, private trainingService: TrainingService) { }
 

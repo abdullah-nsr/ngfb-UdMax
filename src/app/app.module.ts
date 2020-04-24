@@ -26,6 +26,8 @@ import { AuthService } from './auth/auth-service';
 import { TrainingService } from './training/training.service';
 import { environmentFireBase } from '../environments/environment.firebase';
 import { environment } from '../environments/environment'
+import { UIService } from '../app/shared/ui.service';
+import { TRload } from '../app/shared/trlod.service'
 
 @NgModule({
   declarations: [
@@ -53,7 +55,7 @@ import { environment } from '../environments/environment'
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, TrainingService],
+  providers: [AuthService, TrainingService, UIService, TRload],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })

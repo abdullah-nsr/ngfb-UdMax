@@ -51,8 +51,9 @@
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field> -->
         <mat-checkbox ngModel name="agree" required color="primary" >I Agree on terms of use.</mat-checkbox>
-        <button type="submit" mat-raised-button color="primary" [disabled]="signpForm.invalid"> Submit </button>
-    </form>
+        <button *ngIf='!isLooading' type="submit" mat-raised-button color="primary" [disabled]="signpForm.invalid"> Submit </button>
+        <mat-spinner *ngIf='isLooading'></mat-spinner>
+    </form>    
 </section>
 <!-- to controls form there are two way reactive aprotsh and templet driven approach -->
 <!-- <div id="container">

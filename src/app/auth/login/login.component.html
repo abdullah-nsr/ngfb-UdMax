@@ -34,6 +34,7 @@
         </mat-form-field>
         <!-- <mat-checkbox ngModel name="remember" required color="primary" > remember me.</mat-checkbox> -->
         <mat-checkbox formControlName="remember"  color="primary" > remember me.</mat-checkbox>
-        <button type="submit" mat-raised-button color="primary"  [disabled]="loginForm.invalid">Log-in</button>
+        <button *ngIf='!isLooading' type="submit" mat-raised-button color="primary"  [disabled]="loginForm.invalid">Log-in</button>
+        <mat-spinner *ngIf='isLooading'></mat-spinner>
     </form>
 </section>
